@@ -1,0 +1,15 @@
+    local Descendants = workspace:GetDescendants()
+ 
+ 
+for i, value in pairs(Descendants) do
+    if value.Name == "Important" then
+        local cups = value:GetDescendants()
+        for i, e in pairs (cups) do
+            if e.Name == "Detail" then
+            local v = e.Parent.Parent
+                v["5"].Detail.Transparency = 1
+                v["5"].Primary.Transparency = 1
+            end
+        end
+     end  
+end
